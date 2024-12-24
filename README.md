@@ -50,10 +50,9 @@ I plan to host the bot on the cloud and make it available for other servers, all
 
 The bot will post cybersecurity news to your Discord channel every 24 hours!
 
-Future Plans
-
-    Cloud Deployment: Host the bot on a cloud platform (AWS, Heroku, etc.) to keep it running 24/7.
-    Public Availability: Make the bot available for other Discord servers to use.
+## Future Plans
+Cloud Deployment: Host the bot on a cloud platform (AWS, Heroku, etc.) to keep it running 24/7.
+Public Availability: Make the bot available for other Discord servers to use.
 
 
 
