@@ -23,27 +23,27 @@ I plan to host the bot on the cloud and make it available for other servers, all
 
 ### Setup Steps
 
-1. Clone the repository:
+**1. Clone the repository:****
    ```bash
    git clone https://github.com/yourusername/CyberNewsBot.git
    cd CyberNewsBot
    ```
-2. create a virtual environment
+**2. create a virtual environment**
    ```bash
    python3 -m venv venv
    source venv/bin/activate  # On Windows, use venv\Scripts\activate
    ```
-3. install the required dependencies
+**3. install the required dependencies**
    ```bash
    pip install praw
    pip install discord.py
    ```
-4. since this is locally hosted, configure the bot by:
+**4. since this is locally hosted, configure the bot by:**
    - Adding your Discord bot token to the code (in CyberNewsBot.py).
    - Update CHANNEL_ID with the id of the Discord channel where you want the news to be posted.
    - Set FETCH_INTERVAL to 86400 for 24-hour intervals (change as needed).
    
-6. run the bot
+**6. run the bot**
    ```bash
    python CyberNewsBot.py
    ```
