@@ -39,15 +39,22 @@ I plan to host the bot on the cloud and make it available for other servers, all
    pip install discord.py
    ```
 4. since this is locally hosted, configure the bot by:
-   ```
-   - Add your Discord bot token to the code (in CyberNewsBot.py).
-   - Update CHANNEL_ID to the Discord channel where you want the news to be posted.
+   - Adding your Discord bot token to the code (in CyberNewsBot.py).
+   - Update CHANNEL_ID with the id of the Discord channel where you want the news to be posted.
    - Set FETCH_INTERVAL to 86400 for 24-hour intervals (change as needed).
-   ```
+   
 6. run the bot
    ```bash
    python CyberNewsBot.py
    ```
-   
+
+The bot will post cybersecurity news to your Discord channel every 24 hours!
+
+Future Plans
+
+    Cloud Deployment: Host the bot on a cloud platform (AWS, Heroku, etc.) to keep it running 24/7.
+    Public Availability: Make the bot available for other Discord servers to use.
+
+
 
 
