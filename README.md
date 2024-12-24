@@ -11,7 +11,6 @@ I plan to host the bot on the cloud and make it available for other servers, all
 - **Fetches Cybersecurity News**: Automatically retrieves the latest cybersecurity news from Reddit every 24 hours.
 - **Embeds in Discord**: News posts are sent as rich embeds with clickable links to the articles.
 - **Customizable**: Fetch posts from specific subreddits, change fetch intervals, and target specific Discord channels.
-- **Personal Use & Future Deployment**: Initially for personal use, but will be deployed on the cloud and available for other Discord servers.
 
 ## Installation
 
@@ -23,7 +22,7 @@ I plan to host the bot on the cloud and make it available for other servers, all
 
 ### Setup Steps
 
-**1. Clone the repository:****
+**1. Clone the repository:**
    ```bash
    git clone https://github.com/yourusername/CyberNewsBot.git
    cd CyberNewsBot
