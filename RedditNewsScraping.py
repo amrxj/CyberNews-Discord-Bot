@@ -3,21 +3,33 @@ import praw
 #initialize Reddit API w/ credentials
 
 reddit = praw.Reddit(
-    client_id = 'client_id'
-    client_secret = 'client_secret'
-    user_agent = 'user_agent'
+    client_id = 'Client ID Here',
+    client_secret = 'Secret ID Here',
+    user_agent = 'CyberNewsBot V1.0 by /u/Dry-Ad2357' #tbh anything here. 
 )
 
+def get_news():
 #get our cybersecurity subreddit to scrape. 
-subreddit = reddit.subreddit('cybersecurity')
+    subreddit = reddit.subreddit('cybersecurity')
 
 #base off of popularity as > upvotes = more important news
-upvote_minimum = 250 #only focus on the trending posts
+    upvote_minimum = 10 #only focus on the trending posts
+
+    news_to_send = []
+
+#we only want news, so we must specify which flairs in an index
+    desired_flairs = ['news - general', 'news - breaches & ransoms', 'news - vulnerabilities']
+
 
 #loop through the subreddit posts, filter by flair and upvote minimum
-for post in subreddit.new(limit = 10): #10 for now, just a temp thing
-    if post.link_flair_text == 'News - Breaches & Ransoms' and post.score >= upvote_minimum:
-        print(f"Title: {post.title}")
-        print(f"URL: {post.url}")
-        print(f"Flair: {post.link_flair_text}")
-        print(f"Created: {post.created_est}")
+    for post in subreddit.new(limit = 100): #100 for now, just a temp thing
+        #strip whitespace and cmp
+        if post.link_flair_text.strip().lower() in [flair.lower() for flair in desired_flairs]  and post.score >= upvote_minimum:
+            news_to_send.append({
+                "Title": post.title,
+                "URL": post.url,
+                "Flair": post.link_flair_text
+            }) 
+
+    
+    return news_to_send
