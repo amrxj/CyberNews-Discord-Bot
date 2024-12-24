@@ -10,7 +10,7 @@ intents.message_content = True
 bot = commands.Bot(command_prefix = "!", intents = intents)
 
 #set up channel id where it'll communicate (replace with your own channel ID)
-CHANNEL_ID = Channel ID Here
+CHANNEL_ID = 'Here CHANNEL ID INT'
 
 #DEFINE time intervla for fetching cyber news (24 hours = 86400 secs)
 FETCH_INTERVAL = 86400 #24 hours
