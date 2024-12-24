@@ -10,7 +10,7 @@ intents.message_content = True
 bot = commands.Bot(command_prefix = "!", intents = intents)
 
 #set up channel id where it'll communicate (replace with your own channel ID)
-CHANNEL_ID = "Integer Value Of Channel ID HERE"
+CHANNEL_ID = Channel ID Here
 
 #DEFINE time intervla for fetching cyber news (24 hours = 86400 secs)
 FETCH_INTERVAL = 86400 #24 hours
@@ -36,8 +36,8 @@ async def fetch_posts(): #fetches posts, creates embed and posts to a discord ch
         
         #create link embed for daily news
         embed = discord.Embed( #formatting of embed
-            title="Cybersecurity News of Today",
-            description="Here's the trending cybersecurity news for today.",
+            title="Cybersecurity News of The Week",
+            description="Here's the trending cybersecurity news for the week.",
             color=discord.Color.blue()
         )
         
@@ -45,9 +45,11 @@ async def fetch_posts(): #fetches posts, creates embed and posts to a discord ch
         for post in posts: 
             embed.add_field(
                 name=post['Title'],
-                value=f"[Read more]({post['URL']})\n Flair: {post['Flair']}",
+                value=f"[Read more]({post['URL']})\n Category: {post['Category']}",
                 inline=False
             )
+            
+        
         
         #send it to discord
         await channel.send(embed=embed) #sends embed to channel 
@@ -65,4 +67,5 @@ async def on_ready(): #performs task that may take time without block bots other
         
 #run the bot
     
-bot.run('Discord APP Token HERE')
+bot.run('Discord API Key Here')
+
