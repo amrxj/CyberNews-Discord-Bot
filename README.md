@@ -2,13 +2,13 @@
 
 ## Overview
 
-**CyberNewsBot** is a personal project that fetches and shares trending cybersecurity news every 24 hours on Discord. As a student passionate about cybersecurity, I created this bot to keep myself updated on the latest events in the cybersecurity world. The bot retrieves posts from Reddit and shares them in a designated Discord channel with clickable links to each article.
+**CyberNewsBot** is a personal project that fetches and shares trending cybersecurity news every week on Discord. As a student passionate about cybersecurity, I created this bot to keep myself updated on the latest events in the cybersecurity world. The bot retrieves posts from Reddit and shares them in a designated Discord channel with clickable links to each article.
 
 I plan to host the bot on the cloud and make it available for other servers, allowing others to stay informed about cybersecurity trends.
 
 ## Features
 
-- **Fetches Cybersecurity News**: Automatically retrieves the latest cybersecurity news from Reddit every 24 hours.
+- **Fetches Cybersecurity News**: Automatically retrieves the latest trending cybersecurity news from Reddit every week.
 - **Embeds in Discord**: News posts are sent as rich embeds with clickable links to the articles.
 - **Customizable**: Fetch posts from specific subreddits, change fetch intervals, and target specific Discord channels.
 
