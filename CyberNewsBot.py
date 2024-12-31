@@ -13,13 +13,13 @@ bot = commands.Bot(command_prefix = "!", intents = intents)
 CHANNEL_ID = 'Here CHANNEL ID INT'
 
 #DEFINE time intervla for fetching cyber news (24 hours = 86400 secs)
-FETCH_INTERVAL = 86400 #24 hours
+FETCH_INTERVAL = 604800 #weekly in seconds.
 
 #to track the last time the bot got reddit posts
 last_reddit_fetch = 0
 
-#defining function so bot gets posts once every 24 hours
-@tasks.loop(seconds=FETCH_INTERVAL) # allows us to create a 24 hour loop, every 24hs, fetch posts is activated.
+#defining function so bot gets posts once every week
+@tasks.loop(seconds=FETCH_INTERVAL) # allows us to create a weekly loop, fetch posts is activated.
 async def fetch_posts(): #fetches posts, creates embed and posts to a discord channel.
     global last_reddit_fetch
     current_time = time.time()
